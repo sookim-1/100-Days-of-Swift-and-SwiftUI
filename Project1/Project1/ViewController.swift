@@ -15,6 +15,9 @@ class ViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        title = "Storm View"
+        navigationController?.navigationBar.prefersLargeTitles = true
+        
         let fm: FileManager = FileManager.default // 파일시스템으로 작업할 수 있게 해주는 타입
         let path: String = Bundle.main.resourcePath! // 앱번들의 리소스경로 검색
         let items = try! fm.contentsOfDirectory(atPath: path) // 지정된 디렉토리의 단순 검색을 수행하고 포함된 항목의 경로를 반환합니다. -> 디렉토리 중 리소스 경로만 찾아서 배열로 반환
@@ -25,8 +28,6 @@ class ViewController: UITableViewController {
                 pictures.append(item) // 배열에 이미지파일 추가
             }
         }
-        
-        print(pictures)
     }
 
     // 테이블뷰 행의 개수를 지정
@@ -40,6 +41,16 @@ class ViewController: UITableViewController {
         cell.textLabel?.text = pictures[indexPath.row]
         
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        // Main.storyboard에 "Detail" 뷰컨트롤러 로딩 후 DetailViewController로 타입캐스팅
+        if let vc = storyboard?.instantiateViewController(withIdentifier: "Detail") as? DetailViewController {
+            // DetailViewController의 프로퍼티에 값 저장
+            vc.selectedImage = pictures[indexPath.row]
+            // 화면전환
+            navigationController?.pushViewController(vc, animated: true)
+        }
     }
 }
 
