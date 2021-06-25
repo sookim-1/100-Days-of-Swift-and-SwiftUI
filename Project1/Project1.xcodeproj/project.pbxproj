@@ -80,12 +80,12 @@
 			children = (
 				7607590B2682DE6B004E954B /* AppDelegate.swift */,
 				7607590D2682DE6B004E954B /* SceneDelegate.swift */,
+				765494C22684A28C00369853 /* DetailViewController.swift */,
 				7607590F2682DE6B004E954B /* ViewController.swift */,
 				760759112682DE6B004E954B /* Main.storyboard */,
 				760759142682DE6B004E954B /* Assets.xcassets */,
 				760759162682DE6B004E954B /* LaunchScreen.storyboard */,
 				760759192682DE6B004E954B /* Info.plist */,
-				765494C22684A28C00369853 /* DetailViewController.swift */,
 				7607591F2682DE7C004E954B /* Content */,
 			);
 			path = Project1;

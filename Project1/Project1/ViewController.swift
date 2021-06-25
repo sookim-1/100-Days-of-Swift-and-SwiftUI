@@ -28,6 +28,8 @@ class ViewController: UITableViewController {
                 pictures.append(item) // 배열에 이미지파일 추가
             }
         }
+        
+        pictures.sort()
     }
 
     // 테이블뷰 행의 개수를 지정
@@ -48,6 +50,7 @@ class ViewController: UITableViewController {
         if let vc = storyboard?.instantiateViewController(withIdentifier: "Detail") as? DetailViewController {
             // DetailViewController의 프로퍼티에 값 저장
             vc.selectedImage = pictures[indexPath.row]
+            vc.detailViewTitle = "\(pictures.count)개 중 \(indexPath.row + 1)번째 그림"
             // 화면전환
             navigationController?.pushViewController(vc, animated: true)
         }
