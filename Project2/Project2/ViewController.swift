@@ -28,9 +28,18 @@ class ViewController: UIViewController {
         button1.layer.borderColor = UIColor.lightGray.cgColor
         button2.layer.borderColor = UIColor.lightGray.cgColor
         button3.layer.borderColor = UIColor.lightGray.cgColor
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .search, target: self, action: #selector(searchScore))
         askQuestion()
     }
 
+    @objc func searchScore() {
+        let ac = UIAlertController(title: "스코어", message: "현재점수 : \(score)", preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "확인", style: .default)
+        ac.addAction(okAction)
+        present(ac, animated: true)
+    }
+    
     func askQuestion(action: UIAlertAction! = nil) {
         countries.shuffle()
         correctAnswer = Int.random(in: 0...2)
