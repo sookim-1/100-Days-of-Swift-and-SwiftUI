@@ -11,7 +11,7 @@ import WebKit
 class ViewController: UIViewController, WKNavigationDelegate {
     var webView: WKWebView!
     var progressView: UIProgressView!
-    var websites = ["apple.com", "hackingwithswift.com"]
+    var websites = ["apple.com", "hackingwithswift.com", "testwebview.com"]
     
     override func loadView() {
         webView = WKWebView()
@@ -23,6 +23,9 @@ class ViewController: UIViewController, WKNavigationDelegate {
         super.viewDidLoad()
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Open", style: .plain, target: self, action: #selector(openTapped))
+        let backButton = UIBarButtonItem(title: "back", style: .plain, target: self, action: #selector(backButton))
+        let goButton = UIBarButtonItem(title: "go", style: .plain, target: self, action: #selector(goButton))
+        navigationItem.leftBarButtonItems = [backButton, goButton]
         
         let spacer = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
         let refresh = UIBarButtonItem(barButtonSystemItem: .refresh, target: webView, action: #selector(webView.reload))
@@ -38,6 +41,14 @@ class ViewController: UIViewController, WKNavigationDelegate {
         let url = URL(string: "https://" + websites[0])!
         webView.load(URLRequest(url: url))
         webView.allowsBackForwardNavigationGestures = true
+    }
+    
+    @objc func backButton() {
+        webView.goBack()
+    }
+    
+    @objc func goButton() {
+        webView.goBack()
     }
 
     @objc func openTapped() {
@@ -77,6 +88,11 @@ class ViewController: UIViewController, WKNavigationDelegate {
                 }
             }
         }
+//        else {
+//            let ac = UIAlertController(title: "경고", message: "허용되지 않는 URL입니다.", preferredStyle: .alert)
+//            ac.addAction(UIAlertAction(title: "확인", style: .cancel, handler: nil))
+//            present(ac, animated: true)
+//        }
         
         decisionHandler(.cancel)
     }
