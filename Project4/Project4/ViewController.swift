@@ -48,7 +48,7 @@ class ViewController: UIViewController, WKNavigationDelegate {
     }
     
     @objc func goButton() {
-        webView.goBack()
+        webView.goForward()
     }
 
     @objc func openTapped() {
