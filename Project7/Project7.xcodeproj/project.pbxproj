@@ -8,19 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		7686CAB3269C5BB60031A599 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7686CAB2269C5BB60031A599 /* AppDelegate.swift */; };
-		7686CAB5269C5BB60031A599 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7686CAB4269C5BB60031A599 /* SceneDelegate.swift */; };
 		7686CAB7269C5BB60031A599 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7686CAB6269C5BB60031A599 /* ViewController.swift */; };
 		7686CABA269C5BB60031A599 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7686CAB8269C5BB60031A599 /* Main.storyboard */; };
 		7686CABC269C5BB80031A599 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7686CABB269C5BB80031A599 /* Assets.xcassets */; };
 		7686CABF269C5BB80031A599 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7686CABD269C5BB80031A599 /* LaunchScreen.storyboard */; };
 		7686CAC7269C76DC0031A599 /* Petition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7686CAC6269C76DC0031A599 /* Petition.swift */; };
 		7686CAC9269C77400031A599 /* Petitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7686CAC8269C77400031A599 /* Petitions.swift */; };
+		7686CACB269C7FDE0031A599 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7686CACA269C7FDE0031A599 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		7686CAAF269C5BB60031A599 /* Project7.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Project7.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7686CAB2269C5BB60031A599 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7686CAB4269C5BB60031A599 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		7686CAB6269C5BB60031A599 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		7686CAB9269C5BB60031A599 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7686CABB269C5BB80031A599 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -28,6 +27,7 @@
 		7686CAC0269C5BB80031A599 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7686CAC6269C76DC0031A599 /* Petition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Petition.swift; sourceTree = "<group>"; };
 		7686CAC8269C77400031A599 /* Petitions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Petitions.swift; sourceTree = "<group>"; };
+		7686CACA269C7FDE0031A599 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,7 +61,6 @@
 			isa = PBXGroup;
 			children = (
 				7686CAB2269C5BB60031A599 /* AppDelegate.swift */,
-				7686CAB4269C5BB60031A599 /* SceneDelegate.swift */,
 				7686CAB6269C5BB60031A599 /* ViewController.swift */,
 				7686CAB8269C5BB60031A599 /* Main.storyboard */,
 				7686CABB269C5BB80031A599 /* Assets.xcassets */,
@@ -69,6 +68,7 @@
 				7686CAC0269C5BB80031A599 /* Info.plist */,
 				7686CAC6269C76DC0031A599 /* Petition.swift */,
 				7686CAC8269C77400031A599 /* Petitions.swift */,
+				7686CACA269C7FDE0031A599 /* DetailViewController.swift */,
 			);
 			path = Project7;
 			sourceTree = "<group>";
@@ -146,7 +146,7 @@
 				7686CAB7269C5BB60031A599 /* ViewController.swift in Sources */,
 				7686CAC7269C76DC0031A599 /* Petition.swift in Sources */,
 				7686CAB3269C5BB60031A599 /* AppDelegate.swift in Sources */,
-				7686CAB5269C5BB60031A599 /* SceneDelegate.swift in Sources */,
+				7686CACB269C7FDE0031A599 /* DetailViewController.swift in Sources */,
 				7686CAC9269C77400031A599 /* Petitions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
