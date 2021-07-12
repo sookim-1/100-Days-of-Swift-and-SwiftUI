@@ -9,14 +9,16 @@ import UIKit
 
 class ViewController: UITableViewController {
     var petitions = [Petition]()
+    var filterPetition = [Petition]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         let urlString: String
-            
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(creditAlert))
+
         if navigationController?.tabBarItem.tag == 0 {
-         urlString = "https://www.hackingwithswift.com/samples/petitions-1.json"
+            urlString = "https://www.hackingwithswift.com/samples/petitions-1.json"
         } else {
             urlString = "https://www.hackingwithswift.com/samples/petitions-2.json"
         }
@@ -27,8 +29,28 @@ class ViewController: UITableViewController {
                 return
             }
         }
-        
+
         showError()
+    }
+    
+    @objc func creditAlert() {
+        let ac = UIAlertController(title: "Credit", message: "Whitehouse의 We The People API를 이용했습니다.", preferredStyle: .alert)
+        ac.addAction(UIAlertAction(title: "확인", style: .default))
+        ac.addTextField()
+        ac.addAction(UIAlertAction(title: "제출", style: .default, handler: { (action) in
+            guard let filter = ac.textFields?[0].text else { return }
+            let count = self.petitions.count
+            
+            for i in 0..<count {
+                if self.petitions[i].title.contains(filter) {
+                    self.filterPetition.insert(self.petitions[i], at: 0)
+                }
+            }
+            self.petitions = self.filterPetition
+            self.tableView.reloadData()
+        }))
+        
+        present(ac, animated: true)
     }
     
     func showError() {
