@@ -15,9 +15,8 @@
 
 ### 50개의 스위프트 단어 퍼즐
 
-![이미지1](1.png)
-
-![이미지2](2.png)
+<img src="1.png" width="500" height="800">
+<img src="2.png" width="500" height="800">
 
 ----------
 
