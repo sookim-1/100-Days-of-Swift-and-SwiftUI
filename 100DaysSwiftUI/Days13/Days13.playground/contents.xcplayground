@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<playground version='6.0' target-platform='ios' buildActiveScheme='true' importAppTypes='true'>
+    <pages>
+        <page name='3. extension'/>
+        <page name='1. 프로토콜'/>
+        <page name='2. 불투명한 반환값'/>
+        <page name='4. 프로토콜확장'/>
+        <page name='5. 체크포인트8'/>
+    </pages>
+</playground>
